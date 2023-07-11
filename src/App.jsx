@@ -8,7 +8,7 @@ import About from './components/About/About';
 import Plans from './components/Plans/Plans';
 import FAQs from './components/FAQs/Faqs';
 import Support from './components/Support/Support';
-import SignUp from './components/AuthPage/Register';
+import SignUp from './components/AuthPage/SignUp';
 import Login from './components/AuthPage/Login';
 
 function App() {
