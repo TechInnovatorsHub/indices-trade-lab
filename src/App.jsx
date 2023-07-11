@@ -8,7 +8,7 @@ import About from './components/About/About';
 import Plans from './components/Plans/Plans';
 import FAQs from './components/FAQs/Faqs';
 import Support from './components/Support/Support';
-import SignUp from './components/AuthPage/SignUp';
+import Signup from "./components/AuthPage/Signup";
 import Login from './components/AuthPage/Login';
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
             <Route path="/Plans" element={<Plans />} />
             <Route path="/FAQs" element={<FAQs />} />
             <Route path="/support" element={<Support />} />
-            <Route path="/SigUp" element={<SignUp />} />
+            <Route path="/Signup" element={<Signup />} />
             <Route path="/Login" element={<Login />} />
           </Routes>
         </main>
