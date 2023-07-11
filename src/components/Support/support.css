@@ -1,18 +1,46 @@
 .support {
     margin: 0;
     padding: 0;
+    color: white;
+    background: black;
 }
 
 .support-nav {
-    height: 100px; 
+    display: flex;
+    justify-content: space-between;
     background: linear-gradient(90deg, #222B2F 0%, rgba(1, 14, 21, 0.98) 0.01%, rgba(17, 32, 41, 0.97) 19.56%, rgba(33, 42, 47, 0.97) 41.67%, rgba(38, 46, 51, 0.74) 60.42%, rgba(55, 60, 65, 0.62) 72.40%, rgba(55, 60, 65, 0.49) 77.61%, rgba(55, 60, 65, 0.48) 93.24%, rgba(66, 68, 69, 0.55) 100%);
+    position: relative;
+
+    width: 100%;
+    height: 100px; 
 }
 
 .support-nav h1 {
     color: #F7FEFF;
     font-family: Sedan SC;
-    font-size: 45px;
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
+    
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: 16px;
+}
+
+.support-link1 {
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    width: 200px;
+}
+
+.support-link1 img {
+    width: 50px;
+}
+
+.support-link1 p {
+    position:relative;
+
+    font-size: 20px;
+    height: 20px;
+    top: 33px;
 }

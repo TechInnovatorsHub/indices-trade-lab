@@ -1,22 +1,30 @@
-import { Link } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 import "./support.css"
-import Ellipse from "../../assets/images/Ellipse.png";
+import mail from "./Assets/mail.svg"
+import back from "./Assets/back.svg"
 
 function Support() {
+    {/*this function will remove the iamActive class from the navbar when it goes back to the homepage*/}
+    function removeIamActiveClass() {
+        document.querySelector(".navbar .iamActive").classList.remove("iamActive");
+    }
+
     return (
         <div className="support">
             <section className="support-nav">
                 <h1>Customer Support</h1>
-<<<<<<< HEAD
-                <img src="./Assets/mail.svg"/>
-=======
-                <div>
-                    <img src={Ellipse} />
-                </div>
->>>>>>> cd34b52ca4259d1b57d793bad145e1d1a982618b
+                <NavLink className="support-link1">
+                    <img src={mail} key="image"/>
+                    <p key="p">Talk to us</p>
+                </NavLink>
             </section>
-            <section className="-support-main">
-                <Link to="..">back</Link>
+            <section className="support-main">
+                {/*this Link goes back to the homepage but calls the removeIamActiveClass function to remove the iamActive state so that the navbar can be rendered */}
+                <Link to=".." 
+                    onClick={removeIamActiveClass}>
+                    <img src={back} />
+                </Link>
+
                 <div className="support-contact">
                     <h3>Contact us:</h3>
                     <p>
