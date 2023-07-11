@@ -1,12 +1,19 @@
 import { Link } from "react-router-dom"
 import "./support.css"
+import Ellipse from "../../assets/images/Ellipse.png";
 
 function Support() {
     return (
         <div className="support">
             <section className="support-nav">
                 <h1>Customer Support</h1>
+<<<<<<< HEAD
                 <img src="./Assets/mail.svg"/>
+=======
+                <div>
+                    <img src={Ellipse} />
+                </div>
+>>>>>>> cd34b52ca4259d1b57d793bad145e1d1a982618b
             </section>
             <section className="-support-main">
                 <Link to="..">back</Link>
