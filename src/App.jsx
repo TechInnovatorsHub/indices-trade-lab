@@ -4,7 +4,12 @@ import { Routes, Route } from "react-router-dom";
 import Navbar  from "./components/Home/Navbar";
 import { AnimatePresence } from 'framer-motion';
 import Landingpage from "./components/Home/Landingpage";
+import About from './components/About/About';
+import Plans from './components/Plans/Plans';
+import FAQs from './components/FAQs/Faqs';
 import Support from './components/Support/Support';
+import SignUp from './components/AuthPage/Register';
+import Login from './components/AuthPage/Login';
 
 function App() {
   return (
