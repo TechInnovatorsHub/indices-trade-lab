@@ -3,11 +3,8 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar  from "./components/Home/Navbar";
 import { AnimatePresence } from 'framer-motion';
-
 import Landingpage from "./components/Home/Landingpage";
 import Works from "./components/Works/Works";
-
-import Landingpage from "./components/Home/Landingpage";
 import About from './components/About/About';
 import Plans from './components/Plans/Plans';
 import FAQs from './components/FAQs/Faqs';
