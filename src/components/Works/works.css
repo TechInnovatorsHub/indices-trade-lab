@@ -1,0 +1,91 @@
+.heading{
+    text-align: center;
+    font-size: 40px;
+}
+.main-works{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: azure;
+}
+.Hcards{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+.flag{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+svg{
+    /* background-color: blue; */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    width: 250px;
+    border: 2px solid yellow;
+    height: 250px;
+    border-radius: 15px;
+}
+.cards h1{
+    font-size: 25px;
+    font-weight: 700;
+    color: rgb(255, 208, 0);
+}
+.cards p{
+    width: 90%;
+    margin-bottom: 20px;
+}
+.signals{
+    width: 70%;
+    height: 40vh;
+    background-color: aliceblue;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rise{
+    color: rgb(1, 234, 1);
+
+}
+.fall{
+    color: red;
+}
+.Cname{
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    width: 150vh;
+}
+.sell{
+    border: 1px solid red;
+    padding: 5px 20px 5px 20px;
+    margin:10px;
+}
+.buy{
+    border: 1px solid green;
+    padding: 5px 20px 5px 20px;
+    margin:10px;
+}
+.currency1{
+    color: black;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
