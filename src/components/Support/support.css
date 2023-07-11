@@ -1,15 +1,19 @@
 .support {
-    margin: 0;
-    padding: 0;
     color: white;
     background: black;
+
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .support-nav {
+    position: relative;
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(90deg, #222B2F 0%, rgba(1, 14, 21, 0.98) 0.01%, rgba(17, 32, 41, 0.97) 19.56%, rgba(33, 42, 47, 0.97) 41.67%, rgba(38, 46, 51, 0.74) 60.42%, rgba(55, 60, 65, 0.62) 72.40%, rgba(55, 60, 65, 0.49) 77.61%, rgba(55, 60, 65, 0.48) 93.24%, rgba(66, 68, 69, 0.55) 100%);
     position: relative;
+    background: linear-gradient(90deg, #222B2F 0%, rgb(1, 14, 21) 0.01%, rgb(17, 32, 41) 19.56%, rgb(33, 42, 47) 41.67%, rgb(38, 46, 51) 60.42%, rgb(96, 102, 107) 72.40%, rgb(100, 104, 109) 77.61%, rgb(112, 114, 117) 93.24%, rgb(151, 154, 156) 100%);
 
     width: 100%;
     height: 100px; 
@@ -17,9 +21,9 @@
 
 .support-nav h1 {
     color: #F7FEFF;
-    font-family: Sedan SC;
     font-style: normal;
     line-height: normal;
+    font-family: Sedan SC;
     
     font-size: 45px;
     font-weight: 400;
@@ -30,6 +34,7 @@
     display: flex;
     position: relative;
     justify-content: space-evenly;
+
     width: 200px;
 }
 
@@ -43,4 +48,217 @@
     font-size: 20px;
     height: 20px;
     top: 33px;
+}
+
+.support-main .back {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    margin-top: 10px;
+    margin-left:10px;
+}
+
+.support-main {
+    background-image: url('/src/components/Support/Assets/background.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    height: 100vh;
+}
+
+.support-contact {
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+
+hr {
+    width: 780px;
+}
+
+.line {
+    margin-left: 50px;
+}
+
+.support-contact h3{
+    color: #F7FEFF;
+    font-family: Sedan;
+    font-style: normal;
+    line-height: normal;
+
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.support-contact p {
+    color: #F7FEFF;
+    font-style: normal;
+    line-height: normal;
+    font-family: Spline Sans;
+
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.phone-support {
+    margin-left: 50px;
+    margin-bottom: 15px;    
+    margin-top: 15px;    
+}
+
+.phone-support h3 {
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.phone-1 {
+    display: flex;
+}
+
+.phone-1 img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.phone-inner h5 {
+    font-family: Spectral SC; 
+    font-size: 25px;
+}
+
+.phone-inner p {
+    font-family: Special Elite; 
+    font-style: normal;
+    line-height: normal; 
+
+    font-weight: 400;
+}
+
+.online-support {
+    margin-left: 50px;
+    margin-bottom: 15px;    
+    margin-top: 15px;     
+}
+
+.online-1 {
+    display: flex;
+    margin-bottom:10px;
+}
+
+.online-1 img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.online-inner h5 {
+    font-family: Spectral SC; 
+    font-size: 25px;
+}
+
+.online-inner p {
+    font-family: Special Elite; 
+    font-style: normal;
+    line-height: normal; 
+
+    font-weight: 400;
+    width: 400px;
+}
+
+.onlin-2 {
+    display: flex;
+    margin-bottom:10px;
+}
+
+.onlin-2 img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.onlin-inner h5 {
+    font-family: Spectral SC; 
+    font-size: 25px;
+}
+
+.onlin-inner p {
+    font-family: Special Elite; 
+    font-style: normal;
+    line-height: normal; 
+
+    font-weight: 400;
+    width: 600px;
+}
+
+.support-buttons {
+    position: absolute;
+    top: 300px;
+    right: 200px;
+}
+
+.support-buttons .create {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FFD600;
+
+    height: 100px;
+    border-radius: 20px;
+    width: 340px;
+    flex-shrink: 0;
+    margin-top: 10px;
+}
+
+.support-buttons .create p:first-child {
+    line-height: normal; 
+    font-style: normal;
+    font-family: Sedan SC;
+
+    color: #000;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.support-buttons .create p:last-child {
+    font-family: Roboto Condensed;
+    font-style: italic;
+    line-height: normal;
+
+    color: #000;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.support-buttons .login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid yellow;
+    
+    background: #000; 
+    border-radius: 20px;
+    width: 340px;
+    height: 100px;
+    flex-shrink: 0;
+    margin-top: 70px;   
+}
+
+.support-buttons .login p:first-child {
+    line-height: normal; 
+    font-style: normal;
+    font-family: Sedan SC;
+
+    color: white;
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.support-buttons .login p:last-child {
+    font-family: Roboto Condensed;
+    font-style: italic;
+    line-height: normal;
+
+    color: white;
+    font-weight: 300;
+    font-size: 20px;
 }
