@@ -6,9 +6,7 @@ function Support() {
         <div className="support">
             <section className="support-nav">
                 <h1>Customer Support</h1>
-                <div>
-                    <img src="/Assets/Ellipse6.png" />
-                </div>
+                <img src="./Assets/mail.svg"/>
             </section>
             <section className="-support-main">
                 <Link to="..">back</Link>
