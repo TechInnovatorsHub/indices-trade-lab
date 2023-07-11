@@ -4,6 +4,7 @@ import React from "react"
 const Register = () => {
   return (
     <div>
+        <h1>gthuyh</h1>
         <form action="#">
 			{/* <h1>Create Account</h1>
 			<span>or use your email for registration</span> */}
