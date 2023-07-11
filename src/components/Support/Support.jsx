@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import "./support.css"
+import Ellipse from "../../assets/images/Ellipse.png";
 
 function Support() {
     return (
@@ -7,7 +8,7 @@ function Support() {
             <section className="support-nav">
                 <h1>Customer Support</h1>
                 <div>
-                    <img src="/Assets/Ellipse6.png" />
+                    <img src={Ellipse} />
                 </div>
             </section>
             <section className="-support-main">
