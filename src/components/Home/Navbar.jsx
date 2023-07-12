@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react'
 import "./CSS/navbar.css"
 import { NavLink } from "react-router-dom"
@@ -42,13 +43,14 @@ const Navbar = () => {
           Support
         </NavLink>
 
-        <NavLink to="/signup" onClick={handleLinkClick}>
-          SIGNUP
-        </NavLink>
+        <NavLink to="/signup" className="signup" onClick={handleLinkClick}>
+  SIGNUP
+</NavLink>
 
-        <NavLink to="/login" onClick={handleLinkClick}>
-          LOGIN
-        </NavLink>   
+<NavLink to="/login" className="login" onClick={handleLinkClick}>
+  LOGIN
+</NavLink>
+   
       </ul>
     </nav>
   )
