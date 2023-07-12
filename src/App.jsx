@@ -3,7 +3,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar  from "./components/Home/Navbar";
 import { AnimatePresence } from 'framer-motion';
-import Landingpage from "./components/Home/Landingpage";
+// import Landingpage from "./components/Home/Landingpage";
 import Works from "./components/Works/Works";
 import About from './components/About/About';
 import Plans from './components/Plans/Plans';
@@ -20,9 +20,9 @@ function App() {
       {/* <Navbar /> */}
         <main className="mt-14 md:mt-20 px-4 md:px-16 py-4 w-full">
           <Routes>
-            <Route path="/" element={<Landingpage />} /> 
+            {/* <Route path="/" element={<Landingpage />} />  */}
             <Route path="/" element={<Works />} />
-            <Route path="/" element={<Landingpage />} />
+            {/* <Route path="/" element={<Landingpage />} /> */}
             <Route path="/About" element={<About />} />
             <Route path="/Plans" element={<Plans />} />
             <Route path="/FAQs" element={<FAQs />} />
