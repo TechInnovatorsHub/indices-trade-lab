@@ -42,15 +42,15 @@ const Navbar = () => {
         <NavLink to="/support" onClick={handleLinkClick}>
           Support
         </NavLink>
-
+        <div>
         <NavLink to="/signup" className="signup" onClick={handleLinkClick}>
-  SIGNUP
-</NavLink>
+          SIGNUP
+        </NavLink>
 
-<NavLink to="/login" className="login" onClick={handleLinkClick}>
-  LOGIN
-</NavLink>
-   
+        <NavLink to="/login" className="login" onClick={handleLinkClick}>
+          LOGIN
+        </NavLink>
+        </div>
       </ul>
     </nav>
   )
