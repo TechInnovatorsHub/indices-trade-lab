@@ -1,6 +1,9 @@
 .navbar {
-    background-color: #f2f2f2;
-    padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 20px;
   }
   
   .logo img {
@@ -22,6 +25,7 @@
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    margin-right: 10px;
   }
   
   .nav-links a:hover {
@@ -29,6 +33,3 @@
   }
 
 
-.iamActive {
-  display: none;
-}
