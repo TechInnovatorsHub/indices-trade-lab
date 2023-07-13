@@ -1,0 +1,74 @@
+/* .about-container {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px;
+    background-image: url("./src/assets/images/about2.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .welcome-message {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .risk-message {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  } */
+  .about-container{
+    width: 100%;
+    background-image: url("./src/assets/images/about2.jpeg");
+    height: 72vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+  .about-container p{
+    color: white;
+    width: 700px;
+    font-size: 20px;
+    margin: 0 0 0 100px;
+    padding-top:50px;
+  }
+  .about-us{
+    display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  background-image: url("./src/assets/images/about1.jpeg");
+  background-size: cover;
+  color: white;
+  background-size: cover;
+  text-align: center;
+  height: 15vh;
+  }
+  .about-us h1{
+    font-size: 60px;
+    font-weight: 900;
+  }
+  .footer{
+    text-align: right;
+    background-image: url("./src/assets/images/about3.jpeg");
+    background-size: cover;
+    color: white;
+    height: 10vh;
+
+
+  }
+  .icons{
+    display:flex;
+    height: 50px;
+    padding: 10px 0 0 10px;
+    width: 15%;
+    /* background-color: red; */
+    justify-content: space-between;
+  }
+  .icons img{
+    width: 80px;
+    height: 80px;
+  }
