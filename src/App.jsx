@@ -22,9 +22,9 @@ function App() {
   return (
     <AnimatePresence wait>
       <Navbar />
-    <div className="w-screen h-auto flex  flex-col" >
+    <div  >
       {/* <Navbar /> */}
-        <main className="mt-14 md:mt-20 px-4 md:px-16 py-4 w-full">
+        <main >
           <Routes>
             <Route path="/" element={<Landingpage />} /> 
             <Route path="/works" element={<Works />} />
