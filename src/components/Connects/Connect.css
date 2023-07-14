@@ -1,0 +1,85 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .header-nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .cta-button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .hero-section {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  /* Styles for the markets section */
+  .markets-section {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  /* Styles for the certificate section */
+  .certificate-section {
+    display: flex;
+    justify-content: right;
+    margin-top: 50px;
+  }
+  
+  .certificate-info {
+    max-width: 300px;
+    text-align: right;
+  }
+  
+  .certificate-info img {
+    width: 100%;
+    max-width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Styles for the owners section */
+  .owners-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  
+  .owner-profile {
+    max-width: 200px;
+    text-align: center;
+  }
+  
+  .owner-profile img {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 10px;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
