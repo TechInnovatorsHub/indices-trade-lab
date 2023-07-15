@@ -1,0 +1,47 @@
+.body{
+    background-image:url('./src/assets/images/forexchart.jpg');
+}
+
+.FAQs-header{
+    text-align: center;
+    text-transform: capitalize;
+    color:white;
+    font-size: 25px; 
+    padding: 15px;
+    background-color:#191919b4;
+}
+.chart{
+    color: gold;
+}
+.FAQs{
+    padding: 0px 10px 10px;
+    width: 50%;
+    justify-content: center;  
+    align-items: center;
+    margin-left: 25%;
+    margin-top: 1%;
+ }
+ 
+ ::-webkit-details-marker{
+    float: right;
+    margin-top: 3px;
+ }
+ 
+ details{
+    background:rgba(255, 255, 255, 0.158);
+    padding: 8px 15px;
+    border-radius: 7px;
+    margin-top: 10px;
+    font-family: "Rubik";
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+ }
+ 
+ details summary{
+    outline: none;
+    color:lightskyblue ;
+ }
+.text{
+    color: white;
+}
