@@ -1,10 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import "./About.css";
-import About1 from "../../assets/images/about1.jpeg"
-import About3 from "../../assets/images/about2.jpeg"
-import About2 from  "../../assets/images/about3.jpeg"
-
 
 const About = () => {
   return (
@@ -37,13 +33,6 @@ const About = () => {
     the ip contained in this site  for personsl, non-commercial, non-transferable use only in relation to the services offered on the site.
     <br/>
        </p> 
-       {/* <img src={About1} key="image"/>
-       <img src={About3} key="image"/> 
-       <img src={About2} key="image"/>  */}
-       
-
-
-
       </div>
       
     </div>

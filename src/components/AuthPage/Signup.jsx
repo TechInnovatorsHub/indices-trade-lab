@@ -1,19 +1,21 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import { useState } from 'react';
+// import { useHistory } from 'react-router-dom';
 
 const Signup = () => {
+  // const history = useHistory();
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [confirmPasswordError, setConfirmPasswordError] = useState('');
+  const [isSignup, setIsSignup] = useState(true);
 
   const handleSignup = (e) => {
     e.preventDefault();
 
-    // Password validation
     if (password.length < 8) {
       setPasswordError('Password should be at least 8 characters long.');
       return;
@@ -24,77 +26,98 @@ const Signup = () => {
       return;
     }
 
-    // Confirm password validation
     if (password !== confirmPassword) {
       setConfirmPasswordError('Passwords do not match.');
       return;
     }
 
-    // Proceed with signup
-    // Your signup logic goes here
-    console.log('Signup successful!');
+    // Signup logic goes here
+    // console.log('Signup successful!');
   };
+
+  const handleLogin = () => {
+    // Redirect to login page
+    // history.push('./login');
+  };
+
+  const toggleBtn = () => {
+    setIsSignup(!isSignup);
+  };
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-    <div className="bg-white rounded shadow p-8">
-      <h2 className="text-2xl font-bold mb-6">Sign Up</h2>
-      <form className="space-y-4" onSubmit={handleSignup}>
-        <div>
-          <label htmlFor="username" className="block mb-1">Username</label>
-          <input
-            type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-            className="border border-gray-300 rounded px-3 py-2 w-full"
-          />
-        </div>
-        <div>
-          <label htmlFor="email" className="block mb-1">Email</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="border border-gray-300 rounded px-3 py-2 w-full"
-          />
-        </div>
-        <div>
-          <label htmlFor="password" className="block mb-1">Password</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-            className="border border-gray-300 rounded px-3 py-2 w-full"
-          />
-          {passwordError && <p className="text-red-500 text-sm mt-1">{passwordError}</p>}
-        </div>
-        <div>
-          <label htmlFor="confirmPassword" className="block mb-1">Confirm Password</label>
-          <input
-            type="password"
-            id="confirmPassword"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-            className="border border-gray-300 rounded px-3 py-2 w-full"
-          />
-          {confirmPasswordError && <p className="text-red-500 text-sm mt-1">{confirmPasswordError}</p>}
-        </div>
+      <div className="relative">
         <button
-          type="submit"
+          onClick={toggleBtn}
           className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         >
-          Sign Up
+          {isSignup ? 'Signup' : 'Login'}
         </button>
-      </form>
+        <button
+          onClick={handleLogin}
+          className={`absolute top-0 left-0 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transform transition-transform ease-in-out duration-300 ${isSignup ? 'translate-x-0' : '-translate-x-full'}`}
+        >
+          {isSignup ? 'Login' : 'Signup'}
+        </button>
+      </div>
+      <div className="bg-white rounded shadow p-8">
+        <form className="space-y-4" onSubmit={handleSignup}>
+          <div>
+            <label htmlFor="username" className="block mb-1">Username</label>
+            <input
+              type="text"
+              id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+              className="border border-gray-300 rounded px-3 py-2 w-full"
+            />
+          </div>
+          <div>
+            <label htmlFor="email" className="block mb-1">Email</label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="border border-gray-300 rounded px-3 py-2 w-full"
+            />
+          </div>
+          <div>
+            <label htmlFor="password" className="block mb-1">Password</label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              className="border border-gray-300 rounded px-3 py-2 w-full"
+            />
+            {passwordError && <p className="text-red-500 text-sm mt-1">{passwordError}</p>}
+          </div>
+          <div>
+            <label htmlFor="confirmPassword" className="block mb-1">Confirm Password</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+              className="border border-gray-300 rounded px-3 py-2 w-full"
+            />
+            {confirmPasswordError && <p className="text-red-500 text-sm mt-1">{confirmPasswordError}</p>}
+          </div>
+          <button
+            type="submit"
+            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
-  </div>
-  )
-}
+  );
+};
 
 export default Signup;
