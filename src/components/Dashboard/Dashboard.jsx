@@ -1,6 +1,11 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { NavLink } from "react-router-dom"
+import people from "./Assets/switch.svg"
+import bankLogo from "./Assets/bank.svg"
+import cashLogo from "./Assets/money.svg"
+import sponsors from "./Assets/sponsors.svg"
+import userLogo from "./Assets/user.svg"
 import "./Dashboard.css"
 
 const Dashboard = () => {
@@ -15,10 +20,10 @@ const Dashboard = () => {
   ]
 
   const BankInfo = [
-    {id: 1, title: "ACCOUNT BALANCE", logo: "someimage", amount: "$0.00", btnTitle: "REQUEST PAYMENT"},
-    {id: 2, title: "EARNED TOTAL", logo: "someimage", amount: "$0.00", btnTitle: "MAKE DEPOSIT"},
-    {id: 3, title: "ACCOUNT BALANCE", logo: "someimage", amount: "$0.00", btnTitle: "REQUEST PAYMENT"},
-    {id: 4, title: "EARNED TOTAL", logo: "someimage", amount: "$0.00", btnTitle: "MAKE DEPOSIT"}
+    {id: 1, title: "ACCOUNT BALANCE", logo: `${bankLogo}`, amount: "$0.00", btnTitle: "REQUEST PAYMENT"},
+    {id: 2, title: "EARNED TOTAL", logo: `${cashLogo}`, amount: "$0.00", btnTitle: "MAKE DEPOSIT"},
+    {id: 3, title: "ACCOUNT BALANCE", logo: `${bankLogo}`, amount: "$0.00", btnTitle: "REQUEST PAYMENT"},
+    {id: 4, title: "EARNED TOTAL", logo: `${cashLogo}`, amount: "$0.00", btnTitle: "MAKE DEPOSIT"}
   ]
 
   return (
@@ -32,12 +37,12 @@ const Dashboard = () => {
       </marquee>
 
       <section className="dashboard-nav">
-        <p>Pic</p>
+        <img src={people}/>
         <p>Your Personal Affiliate Link:</p>
         <NavLink>https://forextradesacco.com/?ref=Username</NavLink>
         <NavLink>
           <p>Account Name</p>
-          <p>pic</p>
+          <img src={userLogo} />
         </NavLink>
       </section>
 
@@ -56,7 +61,7 @@ const Dashboard = () => {
         {BankInfo.map(info =>
             <div key={info.id}>
               <h4>{info.title}</h4>
-              <p>{info.logo}</p>
+              <img src={info.logo}/>
               <h2>{info.amount}</h2>
               <NavLink>{info.btnTitle}</NavLink>               
             </div>
@@ -64,7 +69,7 @@ const Dashboard = () => {
       </section>
 
       <section className="dashboard-sponsors">
-        sponsors
+        <img src={sponsors}/>
       </section>
 
       <footer className="dashboard-footer">
