@@ -26,14 +26,31 @@ const Dashboard = () => {
     {id: 4, title: "EARNED TOTAL", logo: `${cashLogo}`, amount: "$0.00", btnTitle: "MAKE DEPOSIT"}
   ]
 
+  const moneyInfo = [
+    {id: 2, name: "BTC/USD", value: "30153", crement: "-144(-0.48%)"},
+    {id: 1, name: "EUR/USD", value: "1.10059", crement: "+0.00220(+0.20%)"},
+    {id: 3, name: "KSH/USD", value: "140.7", crement: "-8.3(-0.03%)"},
+    {id: 4, name: "ETH/USD", value: "1908.1", crement: "+18.3(+0.97%)"},
+    {id: 5, name: "KSH/USD", value: "140.7", crement: "-8.3(-0.03%)"},
+    {id: 6, name: "ETH/USD", value: "1908.1", crement: "+18.3(+0.97%)"},
+    {id: 7, name: "ETH/USD", value: "1908.1", crement: "+18.3(+0.97%)"},
+    {id: 8, name: "KSH/USD", value: "140.7", crement: "-8.3(-0.03%)"},
+  ]
+
+
   return (
     <section className="dashboard">
       <marquee>
-        <a>Ivan</a>
-        <a>Sakwa</a>
-        <a>Has</a>
-        <a>written</a>
-        <a>This</a>
+        {moneyInfo.map(money =>
+            <span
+            key={money.id}
+            style={{
+              color: money.crement.includes("-") ? "#8B0000" : "#006400",
+            }}
+            >
+              {money.name}&nbsp;&nbsp;{money.value}&nbsp;&nbsp;{money.crement}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+          )}
       </marquee>
 
       <section className="dashboard-nav">

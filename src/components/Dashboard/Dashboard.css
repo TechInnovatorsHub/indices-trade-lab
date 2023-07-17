@@ -1,6 +1,13 @@
 body {
-    background-color: black;
+    background: #00010E;
     color: white;
+}
+
+.dashboard marquee {
+    background-color: white;
+    color: red;
+
+    padding: 8px;
 }
 
 .dashboard-nav {
