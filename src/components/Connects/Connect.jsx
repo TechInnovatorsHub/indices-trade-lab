@@ -1,13 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import "./Connect.css";
+// import "./Connect.css";
 import certificate from "../../assets/certificate.jpeg";
 import cto from "../../assets/cto.jpeg";
 import ceo from "../../assets/ceo.jpeg";
 
 const Connect = () => {
   return (
-    <div className="flex flex-col items-center justify-center bg-gray-200 pb-10">
+    <div className="flex flex-col items-center justify-center pb-10">
     <div className="flex items-center justify-between w-full  mt-4">
       <button className="ml-2">Register</button>
       <h1 className="text-2xl font-bold">Forex</h1>
