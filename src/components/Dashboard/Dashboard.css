@@ -7,6 +7,8 @@ body {
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid white;
+
+    padding: 10px;
 }
 
 .img-div {
@@ -28,10 +30,23 @@ body {
 
 .affiliate-link  {
     display: inline-block;
-    margin-top: 20px;
     text-decoration: underline;
+
+    margin-top: 20px;
 }
 
 .user-sect {
     display: flex;
+}
+
+.user-sect img {
+    width: 70px;
+}
+
+.user-sect p {
+    display: inline-block;
+
+    margin-right: 10px;
+    margin-top: 17px;
+    font-size: 20px;
 }
