@@ -48,7 +48,7 @@ const Dashboard = () => {
               color: money.crement.includes("-") ? "#8B0000" : "#006400",
             }}
             >
-              {money.name}&nbsp;&nbsp;{money.value}&nbsp;&nbsp;{money.crement}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              {money.name}&nbsp;&nbsp;{money.value}&nbsp;&nbsp;{money.crement}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;
             </span>
           )}
       </marquee>
@@ -60,7 +60,7 @@ const Dashboard = () => {
           </div>
           <div>
             <p>Your Personal Affiliate Link:</p>
-            <NavLink className="affiliate-link">https://forextradesacco.com/?ref=Username</NavLink>
+            <NavLink target="_blank" className="affiliate-link">https://forextradesacco.com/?ref=Username</NavLink>
           </div>
         </div>
         <NavLink className="user-sect">
@@ -69,26 +69,29 @@ const Dashboard = () => {
         </NavLink>
       </section>
 
-      <section className="dashboard-btns">
-        {links.map(link => 
-          <NavLink
-          key={link.id}
-          to={link.path}
-          >
-            {link.name}
-          </NavLink>
-        )}
-      </section>
-
-      <section className="dashboard-cashCards">
-        {BankInfo.map(info =>
-            <div key={info.id}>
-              <h4>{info.title}</h4>
-              <img src={info.logo}/>
-              <h2>{info.amount}</h2>
-              <NavLink>{info.btnTitle}</NavLink>               
-            </div>
+      <section className="dashboard-main">    
+        <section className="dashboard-btns">
+          {links.map(link => 
+            <NavLink
+            key={link.id}
+            to={link.path}
+            className="btn"
+            >
+              <p>{link.name}</p>
+            </NavLink>
           )}
+        </section>
+
+        <section className="dashboard-cashCards">
+          {BankInfo.map(info =>
+              <div key={info.id}>
+                <h4>{info.title}</h4>
+                <img src={info.logo}/>
+                <h2>{info.amount}</h2>
+                <NavLink>{info.btnTitle}</NavLink>               
+              </div>
+            )}
+        </section>
       </section>
 
       <section className="dashboard-sponsors">
