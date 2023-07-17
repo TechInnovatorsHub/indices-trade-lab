@@ -1,10 +1,12 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import "./plans.css";
+import Connects from "../Connects/Connect";
 
 const Plans = () => {
   return (
-    <section className='planspage'>
+    <div>
+      <section className='planspage'>
     <div>
       <section className='plans'> 
         <h1>OUR PLANS</h1>
@@ -23,7 +25,7 @@ const Plans = () => {
            <li> -Standard customer support.</li>
             </ol>
             </p>
-            <button class="button" ><b>choose plan</b></button>
+            <button className="button" ><b>Choose plan</b></button>
           
         </div>
 
@@ -38,7 +40,7 @@ const Plans = () => {
            -24/7 dedicated customer support.<br/>
             One-on-one coaching with experienced traders.
           </p>
-          <button class="button" ><b>choose plan</b></button>
+          <button className="button" ><b>Choose plan</b></button>
         </div>
 
         <div className="card">
@@ -51,11 +53,13 @@ const Plans = () => {
             -Invitations to exclusive events and seminars.<br/>
             -Regular performance reviews.
           </p>
-          <button class="button" ><b>choose plan</b></button>
+          <button className="button" ><b>Choose plan</b></button>
         </div>
       </div>
     </div>
     </section>
+    <Connects />
+    </div>
   )
 }
 
