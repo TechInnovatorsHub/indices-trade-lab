@@ -37,10 +37,16 @@ const Dashboard = () => {
       </marquee>
 
       <section className="dashboard-nav">
-        <img src={people}/>
-        <p>Your Personal Affiliate Link:</p>
-        <NavLink>https://forextradesacco.com/?ref=Username</NavLink>
-        <NavLink>
+        <div className="affiliate">
+          <div className="img-div">
+            <img src={people}/>
+          </div>
+          <div>
+            <p>Your Personal Affiliate Link:</p>
+            <NavLink className="affiliate-link">https://forextradesacco.com/?ref=Username</NavLink>
+          </div>
+        </div>
+        <NavLink className="user-sect">
           <p>Account Name</p>
           <img src={userLogo} />
         </NavLink>
