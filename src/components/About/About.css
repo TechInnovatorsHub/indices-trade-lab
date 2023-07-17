@@ -1,27 +1,10 @@
-/* .about-container {
-    max-width: 600px;
-    margin: 0 auto;
-    width: 100%;
-    padding: 20px;
-    background-image: url("./src/assets/images/about2.jpeg");
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  
-  .welcome-message {
-    color: #333;
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
-  
-  .risk-message {
-    color: #555;
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  } */
-  .about-container{
+.h1{
+  text-align: center;
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.about-container{
     width: 100%;
     background-image: url("./src/assets/images/about2.jpeg");
     height: 72vh;
@@ -37,20 +20,15 @@
     padding-top:50px;
   }
   .about-us{
-    display: flex;
+  display: flex;
   justify-content: space-between;
-  /* align-items: center; */
   background-image: url("./src/assets/images/about1.jpeg");
   background-size: cover;
   color: white;
   background-size: cover;
-  text-align: center;
   height: 15vh;
   }
-  .about-us h1{
-    font-size: 60px;
-    font-weight: 900;
-  }
+
   .footer{
     text-align: right;
     background-image: url("./src/assets/images/about3.jpeg");

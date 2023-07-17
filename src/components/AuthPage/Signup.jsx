@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import { useState } from 'react';
+import "./Authpage.css";
 // import { useHistory } from 'react-router-dom';
 
 const Signup = () => {
@@ -45,7 +46,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen" >
       <div className="relative">
         <button
           onClick={toggleBtn}
@@ -55,13 +56,13 @@ const Signup = () => {
         </button>
         <button
           onClick={handleLogin}
-          className={`absolute top-0 left-0 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transform transition-transform ease-in-out duration-300 ${isSignup ? 'translate-x-0' : '-translate-x-full'}`}
+          className={`absolute top-0 left-0 bg-blue-500 hover:bg-blue-600 text-gray-950 font-bold py-2 px-4 rounded transform transition-transform ease-in-out duration-300 ${isSignup ? 'translate-x-0' : '-translate-x-full'}`}
         >
           {isSignup ? 'Login' : 'Signup'}
         </button>
       </div>
-      <div className="bg-white rounded shadow p-8">
-        <form className="space-y-4" onSubmit={handleSignup}>
+      <div className="bg-purple-500 rounded shadow p-8">
+        <form className="space-y-4 text-gray-950 font-bold" onSubmit={handleSignup}>
           <div>
             <label htmlFor="username" className="block mb-1">Username</label>
             <input
@@ -70,11 +71,11 @@ const Signup = () => {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               required
-              className="border border-gray-300 rounded px-3 py-2 w-full"
+              className="border border-gray-300 text-gray-950 rounded px-3 py-2 w-full"
             />
           </div>
           <div>
-            <label htmlFor="email" className="block mb-1">Email</label>
+            <label htmlFor="email"  className="block mb-1">Email</label>
             <input
               type="email"
               id="email"

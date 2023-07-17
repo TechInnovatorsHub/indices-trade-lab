@@ -6,7 +6,8 @@ import Withdrawals from "../Withdrawals/Withdrawal";
 const Landingpage = () => {
   return (
     <div>
-      <div>Landingpage</div>
+      <div>Landingpage
+      </div>
       <Works />
       <Withdrawals />
     </div>
