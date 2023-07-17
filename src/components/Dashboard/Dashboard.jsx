@@ -83,14 +83,14 @@ const Dashboard = () => {
         </section>
 
         <section className="dashboard-cashCards">
-          {BankInfo.map(info =>
-              <div key={info.id}>
-                <h4>{info.title}</h4>
-                <img src={info.logo}/>
-                <h2>{info.amount}</h2>
-                <NavLink>{info.btnTitle}</NavLink>               
-              </div>
-            )}
+            {BankInfo.map(info =>
+                <div key={info.id}>
+                  <h4>{info.title}</h4>
+                  <img src={info.logo}/>
+                  <h2>{info.amount}</h2>
+                  <NavLink className="card-btn"><p>{info.btnTitle}</p></NavLink>               
+                </div>
+              )}
         </section>
       </section>
 
@@ -99,7 +99,7 @@ const Dashboard = () => {
       </section>
 
       <footer className="dashboard-footer">
-        <div>&#169; 2023. <NavLink>FOREX TRADE SACCO</NavLink> ALL RIGHTS RESERVED </div>
+        <div>&#169; 2023. <NavLink className="footer-btn">FOREX TRADE SACCO</NavLink> ALL RIGHTS RESERVED </div>
       </footer>
 
     </section>
