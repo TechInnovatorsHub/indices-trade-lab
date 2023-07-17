@@ -1,0 +1,5 @@
+.flex{
+    background-image: url(../../assets/images/signup-background.avif);
+    object-fit: cover;
+    background-size: cover;
+}
