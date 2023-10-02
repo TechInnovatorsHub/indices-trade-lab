@@ -8,6 +8,8 @@ import c from '../../assets/images/works_image/3.png'
 function Works() {
     return (
         <div className='main-works'>
+            <hr/>
+            <button className='works_trade'>Trade Now</button>
            <div className='heading'>
             <h1>How it Works</h1>
            </div>
