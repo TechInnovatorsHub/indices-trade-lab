@@ -18,15 +18,22 @@ import Livetrading from "./components/Dashboard/Livetrading/Livetrading";
 import Connect from "./components/Connects/Connect";
 import Dashboard from "./components/Dashboard/Dashboard";
 
+import Profile from "./components/Dashboard/Profile/Profile";
+import Security from "./components/Dashboard/Security/Security";
+import Settings from "./components/Dashboard/Settings/Settings";
+import Withdraw from "./components/Dashboard/Withdraw/Withdraw";
+import YourDeposits from "./components/Dashboard/YourDeposits/YourDeposits"
+
 function App() {
+  
   return (
     <AnimatePresence wait>
       <Navbar />
-    <div  >
-      {/* <Navbar /> */}
-        <main >
+      <div>
+        {/* <Navbar /> */}
+        <main>
           <Routes>
-            <Route path="/" element={<Landingpage />} /> 
+            <Route path="/" element={<Landingpage />} />
             <Route path="/works" element={<Works />} />
             <Route path="/about" element={<About />} />
             <Route path="/plans" element={<Plans />} />
@@ -40,11 +47,20 @@ function App() {
             <Route path="/deposits" element={<Deposits />} />
             <Route path="/livetrading" element={<Livetrading />} />
             <Route path="/connect" element={<Connect />} />
+
+
+            <Route path="/dashboard/profile" element={<Profile />} />
+            <Route path="/dashboard/security" element={<Security />} />
+            <Route path="/dashboard/settings" element={<Settings />} />
+            <Route path="/dashboard/withdraw" element={<Withdraw />} />
+            <Route path="/dashboard/yourdeposits" element={<YourDeposits />} />
+
+
           </Routes>
         </main>
-    </div>
+      </div>
     </AnimatePresence>
-  );
+  )
 }
 
 export default App;
