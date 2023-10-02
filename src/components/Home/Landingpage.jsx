@@ -2,11 +2,14 @@
 import React from 'react'
 import Works from '../Works/Works';
 import Withdrawals from "../Withdrawals/Withdrawal";
+import Invest from './assets/invest.svg'
+import slides from './assets/slides.svg'
 
 const Landingpage = () => {
   return (
     <div>
-      <div>Landingpage
+      <div>
+
       </div>
       <Works />
       <Withdrawals />
