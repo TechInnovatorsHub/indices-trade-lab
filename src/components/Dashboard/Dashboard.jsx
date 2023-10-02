@@ -20,10 +20,11 @@ const Dashboard = () => {
   ]
 
   const BankInfo = [
-    {id: 1, title: "ACCOUNT BALANCE", logo: `${bankLogo}`, amount: "$0.00", btnTitle: "REQUEST PAYMENT"},
+    {id: 1, title: "ACCOUNTs BALANCE", logo: `${bankLogo}`, amount: "$0.00", btnTitle: "REQUEST PAYMENT"},
     {id: 2, title: "EARNED TOTAL", logo: `${cashLogo}`, amount: "$0.00", btnTitle: "MAKE DEPOSIT"},
     {id: 3, title: "ACCOUNT BALANCE", logo: `${bankLogo}`, amount: "$0.00", btnTitle: "REQUEST PAYMENT"},
     {id: 4, title: "EARNED TOTAL", logo: `${cashLogo}`, amount: "$0.00", btnTitle: "MAKE DEPOSIT"}
+    
   ]
 
   const moneyInfo = [
@@ -104,6 +105,6 @@ const Dashboard = () => {
 
     </section>
   )
-}
+} 
 
 export default Dashboard;

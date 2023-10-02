@@ -2,18 +2,38 @@
     text-align: center;
     font-size: 40px;
 }
+.works_trade{
+    position: sticky;
+    top: 130px;
+    right: 1020px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px 30px 5px 5px;
+    border-radius: 10px;
+    background-color: transparent;
+    box-shadow: 1px 1px 4px grey;
+    color: rgb(0, 0, 0) ;
+}
+.works_trade:hover{
+    background-color: black;
+    color: aliceblue;
+    border: 1px solid rgb(0, 0, 0);
+}
 .main-works{
     justify-content: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: black;
-    color: azure;
+    background-color: rgb(255, 253, 225);
+    color: rgb(0, 0, 0);
 }
 .Hcards{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 95%;
+    flex-wrap: wrap;
+}
+.Hcards img{
+    width: 50px;
 }
 .flag{
     display: flex;
@@ -37,14 +57,17 @@ svg{
     text-align: center;
     align-items: center;
     width: 250px;
-    border: 2px solid yellow;
+    background-color: rgb(251, 245, 199);
+    /* border: 2px solid rgb(0, 0, 0); */
+    box-shadow: 1px 1px 4px grey;
     height: 250px;
     border-radius: 15px;
+    margin: 10px;
 }
 .cards h1{
     font-size: 25px;
     font-weight: 700;
-    color: rgb(255, 208, 0);
+    color: rgb(30, 37, 66);
 }
 .cards p{
     width: 90%;
@@ -58,6 +81,7 @@ svg{
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 1px 1px 4px grey;
 }
 .rise{
     color: rgb(1, 234, 1);
@@ -70,7 +94,7 @@ svg{
     color: black;
     display: flex;
     justify-content: space-between;
-    width: 150vh;
+    width: 100%;
 }
 .sell{
     border: 1px solid red;
