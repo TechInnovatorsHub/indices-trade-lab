@@ -1,0 +1,99 @@
+.hero {
+    background-color: #100f15;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .description {
+    text-align: right;
+    margin-top: 0;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+  }
+  
+  .title {
+    text-align: left;
+    margin: 0;
+    margin-top: 20px;
+    color: #FFBF00;
+    font-size: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 700;
+  }
+  
+  .subtitle {
+    text-align: left;
+    margin: 0;
+    margin-top: 10px;
+    color: #FFC000;
+    font-size: 27px;
+  }
+  
+  .img {
+    max-width: 100%;
+    height: auto;
+    align-self: flex-end;
+    margin-top: auto;
+    margin-bottom: 20px;
+  }
+  
+  .button {
+    background-color: #150b30;
+    color: #FFEA00;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: transform .4s;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 20px;
+    align-self: flex-start;
+  }
+  
+  .button:hover{
+    transform: scale(1.2);
+    background-color: #FFD700;
+    color: #150b30;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .container {
+      text-align: center;
+    }
+  
+    .description {
+      text-align: center;
+    }
+  
+    .title {
+      text-align: center;
+      margin-top: 20px;
+    }
+  
+    .subtitle {
+      text-align: center;
+      margin-top: 10px;
+    }
+  
+    img {
+      align-self: center;
+    }
+  
+    .button {
+      align-self: center;
+    }
+  }
+  
