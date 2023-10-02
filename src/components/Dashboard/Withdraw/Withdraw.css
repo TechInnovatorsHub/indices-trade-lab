@@ -1,0 +1,35 @@
+.withdrawal-page {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .withdrawal-page h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .withdrawal-page form {
+    margin-bottom: 20px;
+  }
+  
+  .withdrawal-page select,
+  .withdrawal-page input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #60dfb975;
+  }
+  
+  .withdrawal-page button {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .withdrawal-page .withdrawal-info {
+    font-size: 12px;
+    color: #ccc;
+  }
+  
