@@ -3,7 +3,8 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar  from "./components/Home/Navbar";
 import { AnimatePresence } from 'framer-motion';
-import Landingpage from "./components/Home/Landingpage";
+import Home from "./components/Home/Home";
+// import Landingpage from "./comp÷onents/Home/Landingpage";
 import Works from "./components/Works/Works";
 import About from './components/About/About';
 import Plans from './components/Plans/Plans';
@@ -33,7 +34,7 @@ function App() {
         {/* <Navbar /> */}
         <main>
           <Routes>
-            <Route path="/" element={<Landingpage />} />
+            <Route path="/" element={<Home />} />
             <Route path="/works" element={<Works />} />
             <Route path="/about" element={<About />} />
             <Route path="/plans" element={<Plans />} />

@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import "./Profile.css";
-// :lnbf nml,dsd,lc lc
+
 import calendar from '../../../assets/images/profiles_image/1.png'
 import phone from '../../../assets/images/profiles_image/2.png'
 import mail from '../../../assets/images/profiles_image/3.png'
