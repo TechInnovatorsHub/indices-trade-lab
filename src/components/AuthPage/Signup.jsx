@@ -13,7 +13,6 @@ const Signup = () => {
   const { registerUser } = useContext(AuthContext);
 
   const onSubmit = async (data) => {
-    console.log(data);
     registerUser(data)
   };
 
@@ -47,11 +46,27 @@ const Signup = () => {
             {errors.username && <span className="text-red-500">Username is required</span>}
           </div>
           <div className="mb-4">
+            <label htmlFor="idNumber" className="sr-only">IdNumber</label>
+            <input
+              {...register('idNumber', {
+                required: true,
+                validate: value => !isNaN(value) || 'Enter numbers only'
+              })}
+              type="text"
+              maxLength={8}
+              minLength={8}
+              id="idNumber"
+              placeholder="Enter ID"
+              className="w-full border-2 rounded-md p-3 focus:outline-none focus:border-indigo-500 transition duration-300"
+            />
+            {errors.idNumber && <span className="text-red-500">{ errors.idNumber.message }</span>}
+          </div>
+          <div className="mb-4">
             <label htmlFor="password" className="sr-only">Password</label>
             <input
               {...register('password1', { required: true })}
               type="password"
-              id="password"
+              id="password1"
               placeholder="Password"
               autoComplete="false"
               className="w-full border-2 rounded-md p-3 focus:outline-none focus:border-indigo-500 transition duration-300"
