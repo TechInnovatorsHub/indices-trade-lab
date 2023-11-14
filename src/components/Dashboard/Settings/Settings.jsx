@@ -2,8 +2,7 @@
 import React, { useState } from 'react';
 import "./Settings.css";
 import logo from "./Assets/logo.png";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHouse ,faUser ,faShieldHalved, faBell, faShield, faGlobe, faTty} from '@fortawesome/free-solid-svg-icons'
+import { FaHouse ,FaUser ,FaShieldHalved, FaBell, FaShield, FaGlobe, FaTty} from 'react-icons/fa6'
 
 const Settings = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,43 +22,43 @@ const Settings = () => {
             </li>
             <li className="nav-link">
               <a href="#">
-              <FontAwesomeIcon icon={faHouse} />
+              <FaHouse />
                 <span className="text-nav-text">Home</span>
               </a>
             </li>
             <li className="nav-link">
               <a href="#">
-              <FontAwesomeIcon icon={faUser} />
+              <FaUser />
                 <span className="text-nav-text">Account</span>
               </a>
             </li>
             <li className="nav-link">
               <a href="#">
-              <FontAwesomeIcon icon={faShieldHalved} />
+              <FaShieldHalved />
                 <span className="text-nav-text">Privacy</span>
               </a>
             </li>
             <li className="nav-link">
               <a href="#">
-              <FontAwesomeIcon icon={faBell} />
+              <FaBell />
                 <span className="text-nav-text">Notifications</span>
               </a>
             </li>
             <li className="nav-link">
               <a href="#">
-              <FontAwesomeIcon icon={faShield} />
+              <FaShield />
                 <span className="text-nav-text">Security</span>
               </a>
             </li>
             <li className="nav-link">
               <a href="#">
-              <FontAwesomeIcon icon={faGlobe} />
+              <FaGlobe />
                 <span className="text-nav-text">Languages</span>
               </a>
             </li>
             <li className="nav-link">
               <a href="#">
-              <FontAwesomeIcon icon={faTty} />
+              <FaTty />
                 <span className="text-nav-text">Contacts</span>
               </a>
             </li>
