@@ -1,9 +1,10 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Navbar  from "./components/Home/Navbar";
+import Navbar from "./components/Home/Navbar";
 import { AnimatePresence } from 'framer-motion';
 import Home from "./components/Home/Home";
+import PrivateRoute from "./action/PrivateRoute";
 // import Landingpage from "./comp÷onents/Home/Landingpage";
 import Works from "./components/Works/Works";
 import About from './components/About/About';
@@ -25,11 +26,14 @@ import Settings from "./components/Dashboard/Settings/Settings";
 import Withdraw from "./components/Dashboard/Withdraw/Withdraw";
 import YourDeposits from "./components/Dashboard/YourDeposits/YourDeposits"
 
+import { ToastContainer } from 'react-toastify';
+
 function App() {
-  
+
   return (
     <AnimatePresence wait>
       <Navbar />
+      <ToastContainer />
       <div>
         {/* <Navbar /> */}
         <main>
@@ -43,18 +47,88 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
 
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/withdrawals" element={<Withdrawals />} />
-            <Route path="/deposits" element={<Deposits />} />
-            <Route path="/livetrading" element={<Livetrading />} />
-            <Route path="/connect" element={<Connect />} />
+            <Route
+              path="/dashboard"
+              element={
+                <PrivateRoute>
+                  <Dashboard />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/withdrawals"
+              element={
+                <PrivateRoute>
+                  <Withdrawals />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/deposits"
+              element={
+                <PrivateRoute>
+                  <Deposits />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/livetrading"
+              element={
+                <PrivateRoute>
+                  <Livetrading />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/connect"
+              element={
+                <PrivateRoute>
+                  <Connect />
+                </PrivateRoute>
+              }
+            />
 
 
-            <Route path="/dashboard/profile" element={<Profile />} />
-            <Route path="/dashboard/security" element={<Security />} />
-            <Route path="/dashboard/settings" element={<Settings />} />
-            <Route path="/dashboard/withdraw" element={<Withdraw />} />
-            <Route path="/dashboard/yourdeposits" element={<YourDeposits />} />
+            <Route
+              path="/dashboard/profile"
+              element={
+                <PrivateRoute>
+                  <Profile />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/dashboard/security"
+              element={
+                <PrivateRoute>
+                  <Security />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/dashboard/settings"
+              element={
+                <PrivateRoute>
+                  <Settings />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/dashboard/withdraw"
+              element={
+                <PrivateRoute>
+                  <Withdraw />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/dashboard/yourdeposits"
+              element={
+                <PrivateRoute>
+                  <YourDeposits />
+                </PrivateRoute>
+              }
+            />
 
 
           </Routes>

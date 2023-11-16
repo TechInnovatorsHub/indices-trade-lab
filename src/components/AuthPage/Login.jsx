@@ -1,91 +1,69 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react';
-// import { useHistory } from 'react-router-dom';
+import React, { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
+import AuthContext from '../../action/AuthContext';
 
 const Login = () => {
-  // const history = useHistory();
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [email, setEmail] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
-  const [isSignup, setIsSignup] = useState(false);
 
-  const handleLogin = (e) => {
+  const { loginUser } = useContext(AuthContext);
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Check if the login credentials are valid
-    if (username === 'exampleUser' && password === 'examplePassword') {
-      // Redirect to the dashboard or desired page
-      // history.push('/dashboard');
-    } else {
-      setErrorMessage('Invalid username or password.');
-    }
-  };
-
-  const toggleBtn = () => {
-    setIsSignup(!isSignup);
+    const username = e.target.username.value;
+    const password = e.target.password.value;
+    username.length > 0 && loginUser(username, password);
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <div className="relative">
-        <button
-          onClick={toggleBtn}
-          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-        >
-          {isSignup ? 'Signup' : 'Login'}
-        </button>
-        <button
-          onClick={toggleBtn}
-          className={`absolute top-0 left-0 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transform transition-transform ease-in-out duration-300 ${isSignup ? 'translate-x-0' : '-translate-x-full'}`}
-        >
-          {isSignup ? 'Login' : 'Signup'}
-        </button>
-      </div>
-      <div className="bg-white rounded shadow p-8">
-        <form className="space-y-4" onSubmit={handleLogin}>
-          {isSignup && (
+    <div className="min-h-screen background flex items-center justify-center bg-white py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-md p-4 bg-slate-100 w-full space-y-8">
+        <div>
+          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Log in to your account</h2>
+        </div>
+        <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
+          <input type="hidden" name="remember" defaultValue="true" />
+          <div className="rounded-md shadow-sm -space-y-px">
             <div>
-              <label htmlFor="email" className="block mb-1">Email</label>
+              <label htmlFor="username" className="sr-only">
+                Username
+              </label>
               <input
-                type="email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                id="username"
+                name="username"
+                type="text"
+                autoComplete="username"
                 required
-                className="border border-gray-300 rounded px-3 py-2 w-full"
+                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                placeholder="Username"
               />
             </div>
-          )}
-          <div>
-            <label htmlFor="username" className="block mb-1">Username</label>
-            <input
-              type="text"
-              id="username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              required
-              className="border border-gray-300 rounded px-3 py-2 w-full"
-            />
+            <div>
+              <label htmlFor="password" className="sr-only">
+                Password
+              </label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autoComplete="current-password"
+                required
+                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                placeholder="Password"
+              />
+            </div>
           </div>
+
           <div>
-            <label htmlFor="password" className="block mb-1">Password</label>
-            <input
-              type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              className="border border-gray-300 rounded px-3 py-2 w-full"
-            />
+            <button
+              type="submit"
+              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            >
+              Log in
+            </button>
           </div>
-          {errorMessage && <p className="text-red-500 text-sm mt-1">{errorMessage}</p>}
-          <button
-            type="submit"
-            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          >
-            Submit
-          </button>
+          <p className='my-3'>
+            Don't have an account? <Link to='/signup' className='text-indigo-500'>Sign Up</Link>
+          </p>
         </form>
       </div>
     </div>
