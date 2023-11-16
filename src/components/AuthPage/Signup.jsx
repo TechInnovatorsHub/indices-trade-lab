@@ -46,20 +46,20 @@ const Signup = () => {
             {errors.username && <span className="text-red-500">Username is required</span>}
           </div>
           <div className="mb-4">
-            <label htmlFor="idNumber" className="sr-only">IdNumber</label>
+            <label htmlFor="id_number" className="sr-only">id_number</label>
             <input
-              {...register('idNumber', {
+              {...register('id_number', {
                 required: true,
                 validate: value => !isNaN(value) || 'Enter numbers only'
               })}
               type="text"
               maxLength={8}
               minLength={8}
-              id="idNumber"
+              id="id_number"
               placeholder="Enter ID"
               className="w-full border-2 rounded-md p-3 focus:outline-none focus:border-indigo-500 transition duration-300"
             />
-            {errors.idNumber && <span className="text-red-500">{ errors.idNumber.message }</span>}
+            {errors.id_number && <span className="text-red-500">{ errors.id_number.message }</span>}
           </div>
           <div className="mb-4">
             <label htmlFor="password" className="sr-only">Password</label>
@@ -74,18 +74,18 @@ const Signup = () => {
             {errors.password && <span className="text-red-500">Password is required</span>}
           </div>
           <div className="mb-6">
-            <label htmlFor="confirmPassword" className="sr-only">Confirm Password</label>
+            <label htmlFor="password2" className="sr-only">Confirm Password</label>
             <input
-              {...register('confirmPassword', {
+              {...register('password2', {
                 required: true,
                 validate: value => value === password || 'Passwords do not match'
               })}
               type="password"
-              id="confirmPassword"
+              id="password2"
               placeholder="Confirm Password"
               className="w-full border-2 rounded-md p-3 focus:outline-none focus:border-indigo-500 transition duration-300"
             />
-            {errors.confirmPassword && <span className="text-red-500">{errors.confirmPassword.message}</span>}
+            {errors.password2 && <span className="text-red-500">{errors.password2.message}</span>}
           </div>
           <button
             type="submit"

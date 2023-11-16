@@ -3,6 +3,7 @@ import { createContext, useState, useEffect } from 'react';
 import { jwtDecode } from 'jwt-decode';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import API from '../api';
 
 const AuthContext = createContext();
 
@@ -26,40 +27,36 @@ export const AuthProvider = ({ children }) => {
   const loginUser = async (username, password) => {
     try {
 
-      const response = await fetch('http://127.0.0.1:8000/api/log_in/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          username,
-          password,
-        }),
-      });
-      const data = await response.json();
+      await API.post('/log_in/', {
+        username: username,
+        password: password
+      }).then(response => {
 
-      if (response.status === 200) {
+        let data = response.data
+
         setAuthTokens(data);
         setUser(jwtDecode(data.access));
         localStorage.setItem('authTokens', JSON.stringify(data));
         localStorage.setItem('user', JSON.stringify(jwtDecode(data.access)));
-
         toast(
           'Login successful! Redirecting to dashboard', {
           type: 'success'
         })
-        await new Promise(resolve => setTimeout(resolve, 2000))
 
-        navigate('/dashboard');
-      } else {
-        toast(
-          'something went wrong!', {
+        setTimeout(() => {
+          navigate('/dashboard');
+        }, 5000)
+
+
+
+      }).catch(error => {
+        toast(error.response.data, {
           type: 'error'
         })
-        localStorage.setItem('')
-      }
+      })
     }
     catch (error) {
+      console.log(error.message)
       toast(`Login failed. Please try again later!`, {
         type: 'error',
       });
@@ -67,42 +64,31 @@ export const AuthProvider = ({ children }) => {
   };
 
   const registerUser = async (data) => {
-    try {
-      const response = await fetch('http://127.0.0.1:8000/api/sign_up/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: data,
-      });
-      if (response.status === 201) {
 
-        toast(
-          'Registration successful! Please login to continue.', {
-          type: 'success'
-        }
-        )
-
+    await API.post('/sign_up/', {
+      id_number: data.id_number,
+      username: data.username,
+      email: data.email,
+      password1: data.password1,
+      password2: data.password2,
+    })
+      .then(() => {
         navigate('/login');
-      } else {
-        toast(
-          'something went wrong!', {
+        toast('Registration successful! Please login to continue.', {
+          type: 'success'
+        })
+      })
+      .catch(error => {
+        toast('Registration failed. Please try again later', {
           type: 'error'
         })
-      }
-    } catch (error) {
-      console.error('Registration error:', error)
-      toast(
-        'Registration failed. Please try again later!', {
-        type: 'error'
+        console.error(error)
       })
-    }
   };
 
   const logoutUser = () => {
     setAuthTokens(null);
     setUser(null);
-    toast(null);
     localStorage.removeItem('authTokens');
     navigate('/', { replace: true });
     toast('Logout was successfull', {
