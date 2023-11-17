@@ -4,6 +4,7 @@ import App from './App'
 import './index.css'
 import 'react-toastify/dist/ReactToastify.min.css';
 import { AuthProvider } from './action/AuthContext'
+import useAxios from './action/useAxios';
 
 import { BrowserRouter as Router } from "react-router-dom";
 
