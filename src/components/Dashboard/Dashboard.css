@@ -36,13 +36,6 @@
     display: flex;
 }
 
-.affiliate-link  {
-    display: inline-block;
-    text-decoration: underline;
-
-    margin-top: 20px;
-}
-
 .user-sect {
     display: flex;
 }
@@ -79,7 +72,7 @@
     border-radius: 14px;
 }
 
-/** background: linear-gradient(to right, 
+/** background: linear-gradient(to right,
         white,
         white,
         pink,
@@ -91,7 +84,7 @@
     -webkit-text-fill-color: transparent; */
 
 .dashboard-btns .btn p {
-    background: linear-gradient(180deg, #FFF 0%, #F7FEFF 30.73%, #39DBFF 52.61%, #00D1FF 100%); 
+    background: linear-gradient(180deg, #FFF 0%, #F7FEFF 30.73%, #39DBFF 52.61%, #00D1FF 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

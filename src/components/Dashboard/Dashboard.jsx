@@ -10,7 +10,7 @@ import "./Dashboard.css"
 
 const Dashboard = () => {
   const links = [
-    { id: 1, name: "DEPOSIT", path: "/" },
+    { id: 1, name: "DEPOSIT", path: "/deposits" },
     { id: 2, name: "WITHDRAW", path: "/" },
     { id: 3, name: "YOUR DEPOSITS", path: "/" },
     { id: 4, name: "REFFERALS", path: "/" },
@@ -64,7 +64,7 @@ const Dashboard = () => {
           </div>
           <div>
             <p>Your Personal Affiliate Link:</p>
-            <NavLink target="_blank" className="affiliate-link">https://forextradesacco.com/?ref={username}</NavLink>
+            <NavLink target="_blank" className="inline-flex mt-2 underline">https://forextradesacco.com/?ref={username}</NavLink>
           </div>
         </div>
         <NavLink className="user-sect">

@@ -1,26 +1,2 @@
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  }
-  
-  
-  .nav-links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  .nav-links li {
-    margin-right: 10px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  
 
+/* Not needed rn */

@@ -33,7 +33,7 @@ function App() {
   return (
     <AnimatePresence wait>
       <Navbar />
-      <ToastContainer />
+      <ToastContainer theme='colored' />
       <div>
         {/* <Navbar /> */}
         <main>

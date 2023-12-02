@@ -38,10 +38,8 @@ export const AuthProvider = ({ children }) => {
         setUser(jwtDecode(data.access));
         localStorage.setItem('authTokens', JSON.stringify(data));
         localStorage.setItem('user', JSON.stringify(jwtDecode(data.access)));
-        toast(
-          'Login successful! Redirecting to dashboard', {
-          type: 'success'
-        })
+        toast.success(
+          'Login successful! Redirecting to dashboard')
 
         setTimeout(() => {
           navigate('/dashboard');
@@ -50,16 +48,12 @@ export const AuthProvider = ({ children }) => {
 
 
       }).catch(error => {
-        toast(error.response.data, {
-          type: 'error'
-        })
+        toast.error(error.response.data);
       })
     }
     catch (error) {
       console.log(error.message)
-      toast(`Login failed. Please try again later!`, {
-        type: 'error',
-      });
+      toast.error(`Login failed. Please try again later!`);
     }
   };
 
