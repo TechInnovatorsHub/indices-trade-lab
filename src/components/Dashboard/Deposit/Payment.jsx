@@ -35,25 +35,28 @@ const Payment = (props) => {
 
     // get stripe publishable key
     useEffect(() => {
-        API.get('/fx/stripe_config/').then(async (response) => {
-            const pulishableKey = await response.data;
+        API.get('/fx/stripe_config/')
+            .then(async (response) => {
+                const pulishableKey = await response.data;
 
-            setStripePromise(loadStripe(pulishableKey));
-        })
+                setStripePromise(loadStripe(pulishableKey));
+            })
 
 
         API.post('/fx/stripe_payment_intent/', {
             amount: props.amount,
-            payment_token: localStorage.getItem('paymentToken')
-        }).then(async (r) => {
-            const clientSecret = await r.data.client_secret;
-
-            setClientSecret(clientSecret);
-            const payment_token = r.data.payment_token
-            if (payment_token) {
-                localStorage.setItem('paymentToken', r.data.payment_token);
-            }
+            payment_token: localStorage.getItem('paymentToken'),
         })
+            .then(async (r) => {
+                const clientSecret = await r.data.client_secret;
+
+                setClientSecret(clientSecret);
+                // save payment token for use in updating
+                const payment_token = r.data.payment_token
+                if (payment_token) {
+                    localStorage.setItem('paymentToken', r.data.payment_token);
+                }
+            })
     }, [props.amount]);
 
 
