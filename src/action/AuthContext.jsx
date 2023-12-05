@@ -4,6 +4,7 @@ import { jwtDecode } from 'jwt-decode';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import API from '../api';
+import useAxios from './useAxios';
 
 const AuthContext = createContext();
 
@@ -43,9 +44,7 @@ export const AuthProvider = ({ children }) => {
 
         setTimeout(() => {
           navigate('/dashboard');
-        }, 5000)
-
-
+        }, 4000)
 
       }).catch(error => {
         toast.error(error.response.data);

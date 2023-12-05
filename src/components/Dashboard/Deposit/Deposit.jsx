@@ -1,8 +1,10 @@
 import { FaArrowLeft, FaRegCircleUser } from "react-icons/fa6"
 import Payment from "./Payment"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom";
 
 const Deposit = () => {
+  const navigate = useNavigate();
 
   const [amount, setAmount] = useState(null)
   const [isSum, setIsSum] = useState(false);
@@ -25,7 +27,7 @@ const Deposit = () => {
   return (
     <section
       className="min-h-screen bg-[#8B91A8] flex items-center justify-center relative">
-      <FaArrowLeft className="absolute left-0 top-2 cursor-pointer" />
+      <FaArrowLeft onClick={() => navigate(-1)} className="absolute left-0 top-2 cursor-pointer" />
       <section
         className="bg-gradient-to-tl from-[#424A61] to-[#253043] p-6 w-fit rounded-[20px] relative m-5">
         <div
@@ -63,7 +65,7 @@ const Deposit = () => {
             )}
           </div>
         </div>
-        <div style={isSum ? {}: { pointerEvents: "none", opacity: "0.4" }}>
+        <div style={isSum ? {} : { pointerEvents: "none", opacity: "0.4" }}>
           <Payment amount={amount} />
         </div>
       </section>

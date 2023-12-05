@@ -9,6 +9,8 @@ const baseURL = 'http://127.0.0.1:8000/api';
 const useAxios = () => {
   const { authTokens, setUser, setAuthTokens } = useContext(AuthContext);
 
+  console.log(authTokens)
+
   const axiosInstance = axios.create({
     baseURL,
     headers: { Authorization: `Bearer ${authTokens?.access}` },

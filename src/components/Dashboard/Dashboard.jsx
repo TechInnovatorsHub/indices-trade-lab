@@ -11,12 +11,12 @@ import "./Dashboard.css"
 const Dashboard = () => {
   const links = [
     { id: 1, name: "DEPOSIT", path: "/deposits" },
-    { id: 2, name: "WITHDRAW", path: "/" },
-    { id: 3, name: "YOUR DEPOSITS", path: "/" },
-    { id: 4, name: "REFFERALS", path: "/" },
-    { id: 5, name: "SETTINGS", path: "/" },
-    { id: 6, name: "SECURITY", path: "/" },
-    { id: 7, name: "LIVE TRADING", path: "/" }
+    { id: 2, name: "WITHDRAW", path: "/withdraw" },
+    { id: 3, name: "YOUR DEPOSITS", path: "/yourdeposits" },
+    { id: 4, name: "REFFERALS", path: "/referrals" },
+    { id: 5, name: "SETTINGS", path: "/settings" },
+    { id: 6, name: "SECURITY", path: "/security" },
+    { id: 7, name: "LIVE TRADING", path: "/livetrading" }
   ]
 
   const BankInfo = [

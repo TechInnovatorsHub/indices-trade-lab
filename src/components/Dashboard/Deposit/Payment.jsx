@@ -5,6 +5,7 @@ import CheckoutForm from './CheckoutForm';
 
 
 import API from '../../../api';
+import { toast } from 'react-toastify';
 
 const Payment = (props) => {
     const appearance = {
@@ -40,6 +41,8 @@ const Payment = (props) => {
                 const pulishableKey = await response.data;
 
                 setStripePromise(loadStripe(pulishableKey));
+            }).catch (error => {
+                toast.error('Please login/ reload page to continue')
             })
 
 
@@ -63,7 +66,7 @@ const Payment = (props) => {
     return (
         <div>
             {stripePromise && clientSecret && (
-                <Elements stripe={stripePromise} options={{ clientSecret, appearance }}>
+                <Elements stripe={stripePromise} options={{ clientSecret, appearance }} key={clientSecret}>
                     <CheckoutForm />
                 </Elements>
             )}

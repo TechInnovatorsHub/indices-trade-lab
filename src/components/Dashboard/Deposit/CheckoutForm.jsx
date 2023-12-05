@@ -24,7 +24,7 @@ const CheckoutForm = () => {
             error, paymentIntent = await stripe.confirmPayment({
                 elements,
                 confirmParams: {
-                    return_url: `if_required`
+                    return_url: `${window.location.origin}/yourdeposits`
                 },
             })
         } catch (error) {
@@ -41,10 +41,11 @@ const CheckoutForm = () => {
                 `${error.error.message}`,
                 { type: 'error' }
             )
-        } else if (paymentIntent) {
-            console.log(paymentIntent);
-            toast.success(
-                `Payment status: ${paymentIntent.payment_intent.status}`
+        } else if (paymentIntent.error) {
+            console.log(paymentIntent)
+            console.log(window.location)
+            toast.error(
+                `Payment status: ${paymentIntent.error.payment_intent.status}`
             )
             setIsProcessing(false);
         } else {

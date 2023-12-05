@@ -8,7 +8,6 @@ import c from '../../assets/images/works_image/3.png'
 function Works() {
     return (
         <div className='main-works'>
-            <hr/>
             <button className='works_trade'>Trade Now</button>
            <div className='heading'>
             <h1>How it Works</h1>
@@ -18,7 +17,7 @@ function Works() {
                     <h1>Deposit</h1>
                     <img src= {a}/>
                     <p>Open real account and add funds. We work with more than 20 payment systems.</p>
-                </div> 
+                </div>
                 <div className="cards">
                     <h1>Trade</h1>
                     <img src= {b}/>
@@ -29,7 +28,7 @@ function Works() {
                     <img src= {c}/>
                     <p>Get funds easily to your bank card or e-wallet. We take no commission.</p>
                 </div>
-               
+
             </div>
             <div className='signals'>
                     <div className='currency1'>
@@ -44,7 +43,7 @@ function Works() {
                             <button className='sell'>Sell</button>
                             <button className='buy'>Buy</button>
                         </div>
-                    </div> 
+                    </div>
                     <div className='Cname'>
                     <div className='flag'>
                         <svg>
@@ -56,7 +55,7 @@ function Works() {
                             <button className='sell'>Sell</button>
                             <button className='buy'>Buy</button>
                         </div>
-                    </div> 
+                    </div>
                     <div className='Cname'>
                     <div className='flag'>
                         <svg>
@@ -68,8 +67,8 @@ function Works() {
                             <button className='sell'>Sell</button>
                             <button className='buy'>Buy</button>
                         </div>
-                    </div> 
-                    </div>       
+                    </div>
+                    </div>
             </div>
         </div>
     );
