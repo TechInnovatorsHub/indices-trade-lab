@@ -33,7 +33,7 @@ function App() {
   return (
     <AnimatePresence wait>
       <Navbar />
-      <ToastContainer />
+      <ToastContainer theme='colored' />
       <div>
         {/* <Navbar /> */}
         <main>
@@ -90,7 +90,7 @@ function App() {
 
 
             <Route
-              path="/dashboard/profile"
+              path="/profile"
               element={
                 <PrivateRoute>
                   <Profile />
@@ -98,7 +98,7 @@ function App() {
               }
             />
             <Route
-              path="/dashboard/security"
+              path="/security"
               element={
                 <PrivateRoute>
                   <Security />
@@ -106,7 +106,7 @@ function App() {
               }
             />
             <Route
-              path="/dashboard/settings"
+              path="/settings"
               element={
                 <PrivateRoute>
                   <Settings />
@@ -114,7 +114,7 @@ function App() {
               }
             />
             <Route
-              path="/dashboard/withdraw"
+              path="/withdraw"
               element={
                 <PrivateRoute>
                   <Withdraw />
@@ -122,7 +122,7 @@ function App() {
               }
             />
             <Route
-              path="/dashboard/yourdeposits"
+              path="/yourdeposits"
               element={
                 <PrivateRoute>
                   <YourDeposits />

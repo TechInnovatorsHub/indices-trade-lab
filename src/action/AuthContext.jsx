@@ -4,6 +4,7 @@ import { jwtDecode } from 'jwt-decode';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import API from '../api';
+import useAxios from './useAxios';
 
 const AuthContext = createContext();
 
@@ -38,28 +39,20 @@ export const AuthProvider = ({ children }) => {
         setUser(jwtDecode(data.access));
         localStorage.setItem('authTokens', JSON.stringify(data));
         localStorage.setItem('user', JSON.stringify(jwtDecode(data.access)));
-        toast(
-          'Login successful! Redirecting to dashboard', {
-          type: 'success'
-        })
+        toast.success(
+          'Login successful! Redirecting to dashboard')
 
         setTimeout(() => {
           navigate('/dashboard');
-        }, 5000)
-
-
+        }, 4000)
 
       }).catch(error => {
-        toast(error.response.data, {
-          type: 'error'
-        })
+        toast.error(error.response.data);
       })
     }
     catch (error) {
       console.log(error.message)
-      toast(`Login failed. Please try again later!`, {
-        type: 'error',
-      });
+      toast.error(`Login failed. Please try again later!`);
     }
   };
 

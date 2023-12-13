@@ -41,7 +41,7 @@
     align-items: center;
 
 }
-svg{
+.flag svg{
     /* background-color: blue; */
     border-radius: 50%;
     width: 30px;
