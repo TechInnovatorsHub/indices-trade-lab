@@ -10,9 +10,9 @@ const Landingpage = () => {
 
   return (
     <section 
-      className="hero1 h-[90vh] bg-zinc-950 text-xl text-white pt-[7rem] pl-[4rem] after:content[''] 
+      className="hero1 h-[90vh] bg-zinc-950/90 text-xl text-white pt-[7rem] pl-[4rem] after:content[''] 
         after:absolute after:top-0 after:left-0
-        after:z-10 after:w-[100%] after:h-[90%] after:opacity-10 
+        after:z-10 after:w-[100%] after:h-[100%] after:opacity-10 
         after:bg-[url('/home/hace01/Desktop/Indices/indices-trade-lab/src/components/Home/assets/hero-bg.svg')]
         after:bg-no-repeat after:bg-cover overflow-hidden"
       >
