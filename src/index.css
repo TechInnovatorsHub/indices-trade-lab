@@ -138,3 +138,13 @@
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:#FC5B3F;
+  border-radius: 10px;
+}

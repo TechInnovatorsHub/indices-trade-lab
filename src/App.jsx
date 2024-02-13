@@ -27,6 +27,7 @@ import Withdraw from "./components/Dashboard/Withdraw/Withdraw";
 import YourDeposits from "./components/Dashboard/YourDeposits/YourDeposits"
 
 import { ToastContainer } from 'react-toastify';
+import ToTopButton from "./components/ToTopButton";
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
     <AnimatePresence wait>
       <Navbar />
       <ToastContainer theme='colored' />
+      <ToTopButton />
       <div>
         {/* <Navbar /> */}
         <main>

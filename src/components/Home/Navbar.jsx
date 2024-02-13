@@ -31,7 +31,6 @@ export default function Navbar() {
 })
 
   const links = [
-    { path: '/', name: 'Home' },
     { path: 'about', name: 'About us' },
     { path: 'plans', name: 'Plans' },
     { path: 'faqs', name: 'Faqs' },
