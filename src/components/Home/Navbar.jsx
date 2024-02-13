@@ -62,7 +62,16 @@ export default function Navbar() {
               )}
               {user ?
                 <div className='inline-flex flex-col gap-1 bottom-2'>
-                  <button className='p-1 text-white text-sm border-2 border-yellow-500 rounded-full w-[6rem] text-center hover:bg-yellow-500 hover:text-black' onClick={() => { logoutUser; setNavbarOpen(!navbarOpen) }}>logout</button>
+                  <button 
+                    className='p-1 text-white text-sm border-2 border-yellow-500 rounded-full w-[6rem] text-center hover:bg-yellow-500 hover:text-black' 
+                    onClick={() => { 
+                      localStorage.clear()
+                      sessionStorage.clear()
+                      window.location.href="/"
+                    }}
+                  >
+                      logout
+                  </button>
                 </div>
                 :
                 <div className='flex flex-col mt-5 lg:mt-0 gap-1'>

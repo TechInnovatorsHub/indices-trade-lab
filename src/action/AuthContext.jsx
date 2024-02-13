@@ -82,7 +82,7 @@ export const AuthProvider = ({ children }) => {
   const logoutUser = () => {
     setAuthTokens(null);
     setUser(null);
-    localStorage.removeItem('authTokens');
+    localStorage.clear('authTokens');
     navigate('/', { replace: true });
     toast('Logout was successfull', {
       type: 'success'

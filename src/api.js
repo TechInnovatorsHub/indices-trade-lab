@@ -8,7 +8,7 @@ const API = axios.create({
   // Retrieve the access token from local storage
   if (localStorage.getItem('authTokens')) {
     const accessToken = JSON.parse(localStorage.getItem('authTokens')).access;
-
+      
     //  Set default headers for auth
     API.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
   }
