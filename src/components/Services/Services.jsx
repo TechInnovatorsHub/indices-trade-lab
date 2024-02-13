@@ -1,10 +1,10 @@
 
-const Serivces = () => {
+const Services = () => {
   return (
     <section className="relative bottom-[4rem]">
-      
+
     </section>
   )
 }
 
-export default Serivces
+export default Services
