@@ -1,15 +1,15 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
+import Companies from '../Companies/Companies';
+import Withdrawals from "../Serivces/Serivces";
 import Landingpage from './Landingpage';
-import Works from '../Works/Works';
-import Withdrawals from "../Withdrawals/Withdrawal";
 
 const Home = () => {
   return (
     <div>
-        <Landingpage />
-        <Works />
-        <Withdrawals />
+      <Landingpage />
+      <Companies />
+      <Withdrawals />
     </div>
   )
 }

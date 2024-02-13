@@ -7,9 +7,13 @@ import up from './assets/up.svg'
 import Google from './assets/google.svg'
 import Microsoft from './assets/microsoft.svg'
 
-function Works() {
+function Companies() {
     return (
-        <section className="pl-[5rem] pt-[5rem] bg-gradient-to-t from-zinc-950/80 to-zinc-950/90 h-[10rem] text-white p-2 flex gap-[4rem] relative">
+        <section 
+        style={{
+            background: 'linear-gradient(0deg, rgb(33, 34, 36) 65%, rgba(33, 34, 36, 0.3) 100%)',
+        }}
+        className="pl-[5rem] pt-[6rem] w-full  z-20 h-[13rem] p-2 flex gap-[4rem] relative bottom-[5.8rem] ">
             <div className="relative flex align-center flex-wrap h-[2rem]">
                 <img src={Tesla} className="w-[5rem]" />
                 <div className="bg-[#ee4f6f] text-[#772838] w-[fit-content] p-[0.1rem] flex justify-center items-center rounded h-[1.5rem] relative left-4 top-7">
@@ -50,4 +54,4 @@ function Works() {
     )
 }
 
-export default Works;
+export default Companies

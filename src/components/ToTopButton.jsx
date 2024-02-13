@@ -31,7 +31,7 @@ function ToTopButton() {
         <button
             id="topButton"
             onClick={scrollToTop}
-            className={`fixed bottom-4 right-4 p-2 bg-[#FC5B3F] rounded-xl shadow-lg cursor-pointer w-[2.8rem] h-[2.8rem] z-10  ${
+            className={`fixed bottom-4 right-4 p-2 bg-[#FC5B3F] rounded-xl shadow-lg cursor-pointer w-[2.8rem] h-[2.8rem] z-40  ${
                 isVisible ? 'block' : 'hidden'
             }`}
         >
