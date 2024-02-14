@@ -5,8 +5,7 @@ import Navbar from "./components/Home/Navbar";
 import { AnimatePresence } from 'framer-motion';
 import Home from "./components/Home/Home";
 import PrivateRoute from "./action/PrivateRoute";
-// import Landingpage from "./comp÷onents/Home/Landingpage";
-import Works from "./components/Works/Works";
+
 import About from './components/About/About';
 import Plans from './components/Plans/Plans';
 import FAQs from './components/FAQs/Faqs';
@@ -14,7 +13,7 @@ import Support from './components/Support/Support';
 import Signup from "./components/AuthPage/Signup";
 import Login from './components/AuthPage/Login';
 
-import Withdrawals from "./components/Withdrawals/Withdrawal";
+import Withdrawals from "./components/Services/Services";
 import Deposits from "./components/Dashboard/Deposit/Deposit";
 import Livetrading from "./components/Dashboard/Livetrading/Livetrading";
 import Connect from "./components/Connects/Connect";
@@ -27,6 +26,8 @@ import Withdraw from "./components/Dashboard/Withdraw/Withdraw";
 import YourDeposits from "./components/Dashboard/YourDeposits/YourDeposits"
 
 import { ToastContainer } from 'react-toastify';
+import ToTopButton from "./components/ToTopButton";
+import Companies from "./components/Companies/Companies";
 
 function App() {
 
@@ -34,12 +35,13 @@ function App() {
     <AnimatePresence wait>
       <Navbar />
       <ToastContainer theme='colored' />
+      <ToTopButton />
       <div>
         {/* <Navbar /> */}
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/works" element={<Works />} />
+            <Route path="/work" element={<Companies />} />
             <Route path="/about" element={<About />} />
             <Route path="/plans" element={<Plans />} />
             <Route path="/faqs" element={<FAQs />} />
