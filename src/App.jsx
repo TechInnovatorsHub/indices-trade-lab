@@ -13,7 +13,7 @@ import Support from './components/Support/Support';
 import Signup from "./components/AuthPage/Signup";
 import Login from './components/AuthPage/Login';
 
-import Withdrawals from "./components/Services/Services";
+import Withdrawals from "./components/Serivces/Serivces";
 import Deposits from "./components/Dashboard/Deposit/Deposit";
 import Livetrading from "./components/Dashboard/Livetrading/Livetrading";
 import Connect from "./components/Connects/Connect";
