@@ -38,15 +38,15 @@ const Works=()=>{
             
              } />
             </ul>
-            <div className='start flex flex-col w-4/5 lg:w-3/5 items-center  border-solid border border-neutral-900 rounded-lg text-center'>
+            <div className='start mb-20 flex flex-col w-4/5 lg:w-3/5 items-center  border-solid border-2 border-neutral-300 rounded-lg text-center'>
                 
-                <h1 className='absolute  bg-white px-5 py-2 max-w-4/5 m-[-1rem] font-bold text-2xl'>Simple steps to start trade.</h1>
+                <h1 className='absolute text-red-600 bg-white px-5 py-2 max-w-4/5 m-[-1rem] font-bold text-2xl'>Simple steps to start trade.</h1>
                 
                 <div className='w-4/5 flex flex-wrap justify-center  lg:justify-between items-center'>
                 <Each of={start} render = {(item, index)=>
                     <div className='m-[1rem]'>
-                        <h1 className='border-2 border-red-400 rounded-full text-center w-[3rem] h-[3rem] font-black flex items-center justify-center text-red-400 text-xl m-10'>{`${item.id}`}</h1>
-                        <h1 className='text-black opacity-100s text-2xl'>{`${item.text}`}</h1>
+                        <h1 className='border-2 border-red-400 mb-5 rounded-full text-center w-[3rem] h-[3rem] font-black flex items-center justify-center text-red-400 text-xl m-10'>{`${item.id}`}</h1>
+                        <h1 className='text-black opacity-100s text-l mb-5 font-bold'>{`${item.text}`}</h1>
                     </div>
                 
             }/>
