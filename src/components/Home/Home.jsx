@@ -3,6 +3,7 @@ import React from 'react';
 import Companies from '../Companies/Companies';
 import Withdrawals from "../Serivces/Serivces";
 import Landingpage from './Landingpage';
+import Works from '../works/works'
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Landingpage />
       <Companies />
       <Withdrawals />
+      <Works/>
     </div>
   )
 }
